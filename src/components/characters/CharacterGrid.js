@@ -1,10 +1,10 @@
 import React from 'react'
-import spinner from '../../img/spinner.gif'
+import Spinner from '../ui/Spinner'
 import SingleCharacter from './SingleCharacter'
 export default function CharacterGrid({characters,isLoading}) {
     return (
         <React.Fragment>
-            {isLoading &&<img src={spinner} alt=""/>}
+            {isLoading &&<Spinner/>}
             <section className="cards">
             {characters.map(char=> <SingleCharacter  key={char.char_id} item={char}/> )}
             </section>
